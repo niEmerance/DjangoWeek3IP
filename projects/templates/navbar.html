@@ -14,6 +14,9 @@
                 <a class="navbar-brand" href="{% url 'projects:welcome' %}">Home</a>
             </div>
             <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'projects:profile_api' %}">Profile api</a>
+            </div>
+            <div class="navbar-header">
                 <a class="navbar-brand" href="{% url 'projects:profile' user.id %}">Profile</a>
             </div>
             <a href="{%url 'projects:new-project' %}"

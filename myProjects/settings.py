@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'projects.apps.ProjectsConfig',
     'bootstrap4',
-    
+    'rest_framework',
+    'rest_framework.authtoken',
     # 'tinymce',
 ]
 

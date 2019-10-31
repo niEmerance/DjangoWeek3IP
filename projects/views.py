@@ -6,6 +6,11 @@ from django.contrib.auth import login,logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
 from .models import User,Project,Profile
+from rest_framework import serializers
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializer import ProfileSerializer
+
 
 
 # Create your views here.
@@ -105,3 +110,9 @@ def comment_view(request,project_id):
    else:
        form=CommentForm()
    return render(request,'comment.html',{"form":form,"project_id":project_id})
+
+class ProfileList(APIView):
+    def get(self, request, format=None):
+        all_profile = Profile.objects.all()
+        serializers = ProfileSerializer(all_profile, many=True)
+        return Response(serializers.data)
