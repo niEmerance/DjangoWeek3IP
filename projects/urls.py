@@ -13,7 +13,7 @@ urlpatterns=[
     url(r'profile/(\d+)', views.profile_view, name = 'profile'),
     url(r'update_profile/', views.update_profile, name = 'update_profile'),
     url(r'comment/(\d+)',views.comment_view,name="comment"),
-    # url(r'^search/', views.searchProject, name='searchProject'),
+    url(r'^search/', views.searchProject, name='searchProject'),
     url(r'^api/profile/$', views.ProfileList.as_view(),name='profile_api'),
     url(r'^api/project/$', views.ProjectList.as_view(),name='project_api')
 ]
