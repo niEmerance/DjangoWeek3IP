@@ -8,5 +8,5 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
-        model =Profile
+        model =Project
         fields = ('prj_title', 'prj_desc', 'prj_link')

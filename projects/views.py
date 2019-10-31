@@ -9,7 +9,7 @@ from .models import User,Project,Profile
 from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializer import ProfileSerializer
+from .serializer import ProfileSerializer,ProjectSerializer
 
 
 
