@@ -1,21 +1,30 @@
-
 <html lang="en">
-    <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-      <nav class="navbar navbar-inverse" style="background-color: rgba(211,211,211,0.9)">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <nav class="navbar navbar-inverse" style="background-color: rgba(211,211,211,0.9)">
         <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'projects:welcome' %}">Home</a>
-          </div>
-      
-          <form  method="post">
-            {%csrf_token%}
-            <a href="{%url 'projects:login' %}" style="font-family: serif; color:rgb(0,0,54);font-weight: bold"><img src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png" height="30px" weight="30px">Logout</a>
-        </form>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'projects:welcome' %}">Home</a>
+            </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'projects:profile' user.id %}">Profile</a>
+            </div>
+            <a href="{%url 'projects:new-project' %}"
+                style="font-family: serif; color:rgb(0,0,54);font-weight: bold">Add Project</a>
+            <form method="post">
+                {%csrf_token%}
+                <a href="{%url 'projects:login' %}" style="font-family: serif; color:rgb(0,0,54);font-weight: bold"><img
+                        src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png"
+                        height="30px" weight="30px">Logout</a>
+            </form>
         </div>
         </div>
-      </nav>
+    </nav>
+    {% endif %}
