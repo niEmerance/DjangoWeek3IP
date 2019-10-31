@@ -26,7 +26,10 @@ class Project(models.Model):
 
     def save_project(self, user):
         self.save()
-
+    @classmethod
+    def searchProject(cls,search_term):
+        prj=cls.objects.filter(prj_title__icontains=search_term)
+        return prj
     @classmethod
     def get_all_projects(cls):
        projects=cls.objects.all().prefetch_related('comment_set')
