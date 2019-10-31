@@ -122,3 +122,14 @@ class ProjectList(APIView):
         all_project = Project.objects.all()
         serializers = ProjectSerializer(all_project, many=True)
         return Response(serializers.data)
+
+def searchProject(request):
+    if 'project' in request.GET and request.GET['project']:
+        search_term=request.GET.get('project')
+        projects=Project.searchProject(search_term)
+        message = f"{search_term}"
+
+        return render(request,'search.html',{'message':message,'projects':projects})
+    else:
+        message='no search yet'
+        return render(request,'search.html',{'message':message})

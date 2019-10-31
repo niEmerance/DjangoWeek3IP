@@ -1,0 +1,27 @@
+<link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+{%extends 'base.html'%}
+{% block content %}
+<div class="container-fluid" style="position: relative ; margin-top: 30px">
+
+  <div class="row">
+    {% if projects %}
+    <h2 style="font-family: 'Lobster',cursive;text-decoration-line: underline;text-align: center; font-size: 30px; color:violet">Found {{ projects|length }} of searched term {{message}}</h2>
+    {% else %}
+    <h2 style="font-family: 'Lobster',cursive;text-decoration-line: underline;text-align: center;font-size: 30px;color:violet"> Found 0 photos for the search term {{message}}</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+    
+
+    {% if projects %}
+    {% for project in projects %}
+    <div class="col-sm-6 col-md-3">
+      <img src="{{project.prj_image.url}}" class="img-responsive" alt="Image">
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
