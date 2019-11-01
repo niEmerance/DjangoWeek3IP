@@ -11,7 +11,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'projects:welcome' %}">Home</a>
+                <a class="navbar-brand" href="{% url 'projects:welcome' %}" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold">Home</a>
             </div>
 
             <!-- Adding a search form  -->
@@ -32,24 +32,24 @@
                 <div>
                     <div class="dropdown" style="margin-left: 180px">
                         <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button"
-                            aria-expanded="false"><img src="https://image.flaticon.com/icons/png/128/149/149071.png" height="30px" weight="40px">{{user.username}} 
+                            aria-expanded="false" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold"><img src="https://image.flaticon.com/icons/png/128/149/149071.png" height="40px" weight="40px"> {{user.username}} 
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu" style="padding-left: 10px"style="padding-left: 10px">
                             <li>
-                                <a href="{%url 'projects:profile' user.id %}">Profile</a>
+                                <a href="{%url 'projects:profile' user.id %}" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold">Profile</a>
                             </li>
                             <li>
-                                <a href="{% url 'projects:new-project' %}">Add Project</a>
+                                <a href="{% url 'projects:new-project' %}" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold">Add Project</a>
                             </li>
                             <li>
-                                <a href="{% url 'projects:profile_api' %}">Profile Api</a>
+                                <a href="{% url 'projects:profile_api' %}" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold">Profile Api</a>
                             </li>
                             <li>
-                                <a href="{% url 'projects:project_api' %}">Project Api</a>
+                                <a href="{% url 'projects:project_api' %}" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold">Project Api</a>
                             </li>
                             <li>
-                                <a href="{% url 'projects:login' %}">Logout</a>
+                                <a href="{% url 'projects:login' %}" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold">Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -63,7 +63,7 @@
             </div>
             <form  action="{% url 'projects:logout' %}" method="post">
                 {%csrf_token%}
-                <a href="{%url 'projects:login' %}" style="font-family: serif; color:rgb(0,0,54);font-weight: bold"><img src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png" height="30px" weight="30px">Logout</a>
+                <a href="{%url 'projects:login' %}" style="font-family: serif; color:rgba(0,0,62,0.9);font-weight: bold"><img src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png" height="30px" weight="30px">Logout</a>
             </form>
         </div>
     </nav>
