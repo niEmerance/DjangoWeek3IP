@@ -15,11 +15,11 @@
 
 <body>
     <div class="container" style="background-color:#fff;">
-        <div class="row">
+        <div class="row" style="align-items: center;padding-top:60px;padding-left: 100px">
             <form action="{% url 'projects:comment' project_id %}" method="post" enctype="multipart/form-data">
                 {%csrf_token%}
                 {% bootstrap_form form%}
-                <input id="id_myfield" type="submit" class="btn btn-success btn-lg" value="Add Comment">
+                <input id="id_myfield" type="submit" class="btn btn-secondary" value="Add Comment">
             </form>
             {% block scripts %}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
