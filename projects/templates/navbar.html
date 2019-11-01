@@ -43,6 +43,12 @@
                                 <a href="{% url 'projects:new-project' %}">Add Project</a>
                             </li>
                             <li>
+                                <a href="{% url 'projects:profile_api' %}">Profile Api</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'projects:project_api' %}">Project Api</a>
+                            </li>
+                            <li>
                                 <a href="{% url 'projects:login' %}">Logout</a>
                             </li>
                         </ul>
@@ -54,6 +60,9 @@
                 </li>
 
                 {% endif %}
+            </div>
+            <div class="col-sm-6 col-md-6">
+                
             </div>
         </div>
     </nav>
