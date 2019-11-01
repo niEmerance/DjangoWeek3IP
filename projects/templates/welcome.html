@@ -1,7 +1,7 @@
 {%extends 'base.html'%}
 
 {% block content %}
-<div style="background-image: url('http://www.chinaconstruction.ae/wp-content/uploads/2017/12/ChinaConstruction_Award_Projects_BigProjectWaterCanal_2016.jpg');height:500px;background-repeat: no-repeat;background-size: cover">
+<div style="background-image: url('http://www.chinaconstruction.ae/wp-content/uploads/2017/12/ChinaConstruction_Award_Projects_BigProjectWaterCanal_2016.jpg');height:500px;background-repeat: no-repeat;background-size: cover;padding-left: 10px">
   <div>
       <h1 style="color: #87CEEB;padding-left: 800px;padding-top: 300px ;font-family: serif;font-size: 45px;font-weight: bold">Projects Awards App</h1>
   </div>
@@ -22,17 +22,16 @@
                 <!-- <div class="col-md-3"></div> -->
                 <div class="col-md-6" style=" padding:10px">
                     <h2><a href="{{project.prj_link}}" style="font-family: serif; color:rgba(0,0,62,0.9);text-align: center">{{project.prj_title}}</a></h2>
-                    <img src="{{project.prj_image.url}}" class="img-responsive" alt="" height=100px width=320px>
+                    <img src="{{project.prj_image.url}}" class="img-responsive" alt="" height=160px width=320px>
 
                     <p
-                        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:14px">
+                        style="font-family:sans-serif;font-size:14px;color: rgba(0,0,0,0.6)">
                         {{project.prj_desc}}</p>
-                    <p
-                        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:12px;font-style:italic">
-                        <a href="{{project.prj_link}}">Live Link</a></p>
-                    <p>{{user.username}}</p>
+                    <p>
+                        <a href="{{project.prj_link}}" style="font-family:sans-serif;font-size:12px;font-style:italic;color: rgba(0,0,62,0.9)">Live Link</a></p>
+                    <p style="font-family:sans-serif;font-size:12px;font-style:italic;color: rgba(0,0,62,0.4)">posted by~{{user.username}}</p>
                     <p><a href="{% url 'projects:comment' project.id %}"
-                            style="font-family: 'Courier New', Courier, monospace; color:rgba(100,0,62,0.8)">Leave
+                            style="font-family: sans-serif; color:rgba(100,0,62,0.8)">Leave
                             Comment</a></p>
 
                     {% for coment in project.comment_set.all %}
