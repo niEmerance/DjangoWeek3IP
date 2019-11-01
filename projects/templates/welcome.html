@@ -24,12 +24,12 @@
                     <p><a href="{% url 'projects:comment' project.id %}"
                             style="font-family: 'Courier New', Courier, monospace; color:rgba(100,0,62,0.8)">Leave
                             Comment</a></p>
-                   
+
                     {% for coment in project.comment_set.all %}
                     <p>{{coment.comment_content}}</p>
                     {% empty %}
                     {% endfor %}
-                    
+
                 </div>
                 <br><br>
 
