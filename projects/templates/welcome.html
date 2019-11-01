@@ -1,19 +1,30 @@
 {%extends 'base.html'%}
 
 {% block content %}
-<div style="background-image: url('http://www.chinaconstruction.ae/wp-content/uploads/2017/12/ChinaConstruction_Award_Projects_BigProjectWaterCanal_2016.jpg');height:500px;background-repeat: no-repeat;background-size: cover;padding-left: 10px">
-  <div>
-      <h1 style="color: #87CEEB;padding-left: 800px;padding-top: 300px ;font-family: serif;font-size: 45px;font-weight: bold">Projects Awards App</h1>
-  </div>
-</div>
-<div >
+<div
+    style="background-image: url('http://www.chinaconstruction.ae/wp-content/uploads/2017/12/ChinaConstruction_Award_Projects_BigProjectWaterCanal_2016.jpg');height:500px;background-repeat: no-repeat;background-size: cover;padding-left: 10px">
     <div>
-        <h1 style="color: rgba(0,0,62,0.5);font-family: serif;font-size: 45px;font-weight: bold; text-align: center;padding-top: 10px">About Us.</h1>
-        <p style="padding-left: 40px;color:rgba(0,0,0,0.6)">At Moringa school you create a lot of projects (IPs, Mid-week projects) but you never know how those projects rate with your peers.Your objective is to create an</br> application like Awwards (Links to an external site.) (It doesn't necessarily have to be exactly the same). The application will allow a user to post a project he/she </br>has created and get it reviewed by his/her peers.</p>
+        <h1
+            style="color: #87CEEB;padding-left: 800px;padding-top: 300px ;font-family: serif;font-size: 45px;font-weight: bold">
+            Projects Awards App</h1>
     </div>
 </div>
 <div>
-    <h1 style="color: rgba(0,0,62,0.5);font-family: serif;font-size: 45px;font-weight: bold; text-align: center;padding-top: 10px">Projects</h1>
+    <div>
+        <h1
+            style="color: rgba(0,0,62,0.5);font-family: serif;font-size: 45px;font-weight: bold; text-align: center;padding-top: 10px">
+            About Us.</h1>
+        <p style="padding-left: 40px;color:rgba(0,0,0,0.6)">At Moringa school you create a lot of projects (IPs,
+            Mid-week projects) but you never know how those projects rate with your peers.Your objective is to create
+            an</br> application like Awwards (Links to an external site.) (It doesn't necessarily have to be exactly the
+            same). The application will allow a user to post a project he/she </br>has created and get it reviewed by
+            his/her peers.</p>
+    </div>
+</div>
+<div>
+    <h1
+        style="color: rgba(0,0,62,0.5);font-family: serif;font-size: 45px;font-weight: bold; text-align: center;padding-top: 10px">
+        Projects</h1>
     <div style="padding-top: 20px;padding-left: 30px">
         <div class="row">
             {% for project in projects %}
@@ -21,15 +32,19 @@
 
                 <!-- <div class="col-md-3"></div> -->
                 <div class="col-md-6" style=" padding:10px">
-                    <h2><a href="{{project.prj_link}}" style="font-family: serif; color:rgba(0,0,62,0.9);text-align: center">{{project.prj_title}}</a></h2>
+                    <h2><a href="{{project.prj_link}}"
+                            style="font-family: serif; color:rgba(0,0,62,0.9);text-align: center">{{project.prj_title}}</a>
+                    </h2>
                     <img src="{{project.prj_image.url}}" class="img-responsive" alt="" height=160px width=320px>
 
-                    <p
-                        style="font-family:sans-serif;font-size:14px;color: rgba(0,0,0,0.6)">
+                    <p style="font-family:sans-serif;font-size:14px;color: rgba(0,0,0,0.6)">
                         {{project.prj_desc}}</p>
                     <p>
-                        <a href="{{project.prj_link}}" style="font-family:sans-serif;font-size:12px;font-style:italic;color: rgba(0,0,62,0.9)">Live Link</a></p>
-                    <p style="font-family:sans-serif;font-size:12px;font-style:italic;color: rgba(0,0,62,0.4)">posted by~{{user.username}}</p>
+                        <a href="{{project.prj_link}}"
+                            style="font-family:sans-serif;font-size:12px;font-style:italic;color: rgba(0,0,62,0.9)">Live
+                            Link</a></p>
+                    <p style="font-family:sans-serif;font-size:12px;font-style:italic;color: rgba(0,0,62,0.4)">posted
+                        by~{{user.username}}</p>
                     <p><a href="{% url 'projects:comment' project.id %}"
                             style="font-family: sans-serif; color:rgba(100,0,62,0.8)">Leave
                             Comment</a></p>
