@@ -43,6 +43,11 @@ def login_view(request):
         form=AuthenticationForm()
     return render(request, 'registration/login.html',{"form":form})
 
+def logout_view(request):
+    if request.method=="POST":
+        logout(request)
+    return redirect('projects:login')
+
 @login_required(login_url='login/')
 def new_project(request):
     current_user = request.user
