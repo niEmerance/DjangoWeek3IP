@@ -8,7 +8,7 @@
 </head>
 
 <body >
-    <nav class="navbar navbar-expand-md navbar-light bg-light" style="background-color:rgba(0,0,62,0.4)>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="{% url 'projects:welcome' %}" style="font-family:serif;color:rgba(0,0,62,0.9);font-weight: bold">Home</a>
@@ -55,9 +55,9 @@
                     </div>
                 </div>
                 {% else %}
-                <li>
-                    <a class='btn btn-default' href="{% url 'projects:login' %}">Login</a>
-                </li>
+            
+                    <a class='btn btn-default' href="{% url 'projects:login' %}"></a>
+                
 
                 {% endif %}
             </div>
