@@ -16,9 +16,9 @@ This is an application like Awwards (Links to an external site.) (It doesn't nec
 
 ### How to use
 To use Projects Award App, you must login/register. Once logged in, you will be able to see projectss made by other users.
-You can add your own photos from your profile page.
-As a user you can also follow other users and view images posted by those users.
-You also have the possibility to edit your profile and view the photos that you have posted.
+You can add your own projects from your profile page.
+As a user you can view projects posted by those users.
+You also have the possibility to edit your profile and view the projects that you have posted.
 
 
 ### Tech used
