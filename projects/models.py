@@ -13,6 +13,9 @@ class Profile(models.Model):
     def __str__(self):
         return self.bio
 
+    def save_profile(self):
+        self.save()
+
 class Project(models.Model):
     prj_title = models.CharField(max_length =30)
     prj_image = models.ImageField(upload_to = 'photos/')
