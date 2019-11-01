@@ -30,12 +30,12 @@
             <div class="col-sm-6 col-md-6">
                 {% if user.is_authenticated %}
                 <div>
-                    <div class="dropdown" style="width: 300px; padding-left: 180px">
+                    <div class="dropdown" style="margin-left: 180px">
                         <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button"
                             aria-expanded="false"><img src="https://image.flaticon.com/icons/png/128/149/149071.png" height="30px" weight="40px"> Account
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu" role="menu" style="padding-left: 10px"style="padding-left: 10px">
                             <li>
                                 <a href="{%url 'projects:profile' user.id %}">Profile</a>
                             </li>
